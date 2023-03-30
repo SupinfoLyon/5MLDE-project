@@ -1,0 +1,6 @@
+great_expectations
+pandas
+scikit-learn
+prefect
+mlflow
+numpy

@@ -1,0 +1,32 @@
+artifact_path: model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.6
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.0
+mlflow_version: 2.1.1
+model_uuid: e38110d891ff4fd5a953ecbfa9095a44
+run_id: 3b174adc977b424b8cd372799d5682d9
+signature:
+  inputs: '[{"name": "BOROUGH", "type": "long"}, {"name": "NEIGHBORHOOD", "type":
+    "string"}, {"name": "BUILDING CLASS CATEGORY", "type": "string"}, {"name": "TAX
+    CLASS AT PRESENT", "type": "string"}, {"name": "BLOCK", "type": "long"}, {"name":
+    "LOT", "type": "long"}, {"name": "BUILDING CLASS AT PRESENT", "type": "string"},
+    {"name": "ADDRESS", "type": "string"}, {"name": "APARTMENT NUMBER", "type": "string"},
+    {"name": "ZIP CODE", "type": "long"}, {"name": "RESIDENTIAL UNITS", "type": "long"},
+    {"name": "COMMERCIAL UNITS", "type": "long"}, {"name": "TOTAL UNITS", "type":
+    "long"}, {"name": "LAND SQUARE FEET", "type": "double"}, {"name": "GROSS SQUARE
+    FEET", "type": "double"}, {"name": "YEAR BUILT", "type": "long"}, {"name": "TAX
+    CLASS AT TIME OF SALE", "type": "long"}, {"name": "BUILDING CLASS AT TIME OF SALE",
+    "type": "string"}, {"name": "SALE DATE", "type": "string"}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+utc_time_created: '2023-03-30 14:51:18.236347'

@@ -1,0 +1,44 @@
+version: "3.9"
+
+services:
+  mlflow:
+    build: ./mlflow
+    container_name: mlflow
+    ports:
+      - "5001:5000"
+    volumes:
+      - ./mlruns:/mlruns
+      - ./mlflow:/mlflow
+
+  prefect:
+    restart: always
+    build: ./prefect
+    container_name: prefect
+
+    ports:
+      - "4200:4200"
+    volumes:
+      - ./prefect/data:/root/.prefect
+      - ./prefect/flow:/flows
+    environment:
+      - PREFECT_SERVER_API_HOST=localhost
+
+  api:
+    restart: always
+    build: ./api
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api:/api
+      - ./mlflow:/mlflow
+    command: uvicorn main:app --reload --host 0.0.0.0 --port 8000
+
+  website:
+    build: ./website
+    container_name: website
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./website:/website
+    command: bash -c "npm install && ng serve --host 0.0.0.0 --port 3000"

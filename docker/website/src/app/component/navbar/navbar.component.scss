@@ -1,0 +1,17 @@
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+ul[nz-menu]{
+  border-bottom: none;
+}

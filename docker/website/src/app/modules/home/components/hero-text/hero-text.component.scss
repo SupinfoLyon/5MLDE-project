@@ -1,0 +1,49 @@
+.title{
+    color: #091638;
+    margin-bottom: 8px;
+    max-width: 430px;
+    margin-top: 100px;
+}
+
+.description{
+    max-width: 500px;
+}
+
+.button{
+    background-color: #1C3988;
+    border:none;
+    color: #fff;
+    padding: 10px 25px;
+    text-align: center;
+    text-decoration: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: min-content;
+    margin-top: 32px;
+
+    text-transform: capitalize;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    white-space: nowrap;
+
+
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+
+    path{
+        fill: white;
+    }
+
+    &:hover{
+        background-color: #091638;
+    }
+
+}
