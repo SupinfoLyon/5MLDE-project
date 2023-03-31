@@ -48,6 +48,10 @@ Une fois le projet lancé, vous pouvez accéder à :
 - MLFlow à l'adresse suivante : [http://localhost:5001](http://localhost:5001)
 - Prefect à l'adresse suivante : [http://localhost:4200](http://localhost:4200)
 
+## Architecture du projet
+
+Voici un schéma résumant l'architecture et le fonctionnement de notre projet : https://excalidraw.com/#json=fCLuQASpdTNbl--H_o1Mu,K53SowdgEOhTEIv0OeMr1Q
+
 
 
 
